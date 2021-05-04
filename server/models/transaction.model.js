@@ -15,7 +15,6 @@ const TransactionSchema = new Schema({
     },
 },
     {
-
       timestamps:{
         createdAt:"Registered_at",
         updatedAt:"Updated_at"
