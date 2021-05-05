@@ -13,11 +13,6 @@ const TransactionSchema = new Schema({
       required:[true,"InitialBalance is required"],
       trim:true
     },
-    NewBalance: {
-      type:Number,
-      required:[true,"NewBalance is required"],
-      trim:true
-    },
     TransaportFare: {
       type:Number,
       required:[true,"InitialBalance is required"],
