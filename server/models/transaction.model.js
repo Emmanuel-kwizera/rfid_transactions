@@ -23,7 +23,6 @@ const TransactionSchema = new Schema({
       required:[true,"InitialBalance is required"],
       trim:true
     }    
-
 },
     {
       timestamps:{
