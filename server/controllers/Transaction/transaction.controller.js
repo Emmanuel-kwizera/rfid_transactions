@@ -19,3 +19,8 @@ module.exports.getTransactions = asyncHandler(async(req,res,next) => {
     if(transactions){res.send({success:true,data:transactions}).status(201);} else return next(new ErrorMessage("No transaction so far",404));
 })
 
+module.exports.deleteTransaction = asyncHandler(async(req,res,next)=>{
+    let transaction = await Transaction.findByIdAndDelete(req.params.id);
+    if(transaction){res.send({success:true,data:transaction}).status(201)} else return next(new ErrorMessage("Transaction deletion failed",400));     
+})
+
