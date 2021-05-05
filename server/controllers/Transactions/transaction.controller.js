@@ -2,13 +2,15 @@ const Transaction = require("../../models/transaction.model.js");
 const ErrorMessage = require("../../utils/ErrorResponse");
 const Card = require("../../models/card.model.js");
 const asyncHandler = require('express-async-handler');
-// const {getCardByUUId,updateCard} = require("../Cards/card.controller")
+const {getCardByUUId,updateCard} = require("../Cards/card.controller")
 
 module.exports.addTransaction = asyncHandler(async(req,res,next) => {
     let {UUID,InitialBalance,TransaportFare} = req.body;
     const newTransaction = await Transaction.create({UUID,InitialBalance,TransaportFare});
     let card = await Card.findById(UUID);
-    if(!card) return next(new ErrorMessage("CARD NOT FOUND",404));
+    if(!card) return res.send("CARD NOT FOUND").status(404);
+    card.Balance = card.Balance-TransaportFare;
+    await card.save();
     if(newTransaction){res.send({success:true,data:newTransaction}).status(200);} else return next(new ErrorMessage("Something Went wrong during user creation",400));
 })
 
