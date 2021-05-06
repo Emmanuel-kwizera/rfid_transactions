@@ -21,8 +21,11 @@
                     Log In
                 </button>
             </div>
-            <div class="what-we-do w-3/4 m-auto">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, officiis similique. Minima quia debitis itaque quibusdam, numquam magni, quae laborum vitae unde, perspiciatis accusamus quod eos expedita possimus minus quasi?</p>
+            <div class="what-we-do w-3/4 m-auto mt-60">
+                <h3 class="pl-36 pb-3 text-xl font-serif">What do we Help you</h3>
+                <p class="font-thin text-lg">
+                    We help you Keep logs of When and How much you payed for you last resent transactions of any type either Transport payment, Buyying things or Dept payment. Register your card now and enjoy the service using our app.
+                </p>
             </div>    
         </div>
     </div>
