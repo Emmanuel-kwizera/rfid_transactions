@@ -31,8 +31,10 @@
                     <!-- <button class="try-now-button py-1 px-6 rounded float-right mt-4 mr-64" on:click={handleClick}>
                         Try Now
                     </button> -->
-                        <Link to="/App">Try Now</Link>
-                    <RouterView />                
+                    <!-- <div class="try-now-btn"> -->
+                        <Link class="py-3 px-12" to="/App">Try Now</Link>
+                    <RouterView />  
+                    <!-- </div>               -->
                 </div>
             </div>    
         </div>
@@ -54,7 +56,8 @@
     .log-in-bttn:focus{
         outline: none;
     }
-    /* .try-now-button{
+    /* .try-now-btn{
+        width: 10rem;
         background-color: #ff6b22;
     } */
 </style>
