@@ -1,20 +1,30 @@
 <script>
     import Tailwind from './Tailwind.svelte';
+    function handleClick() {
+		alert('Button in ondoing stage')
+	}
 </script>
 
 <Tailwind />
 
 <main>
-    <div class="w-1/2 left-side-web">
-        <img class="w-60 m-auto pt-32" src="https://o.remove.bg/downloads/79340d09-d394-4776-97b4-c9739b33fb25/279-2793698_rfid-card-reader-logo-removebg-preview.png" alt="card">
-        <div>
-            <h4 class="pl-48 text-white text-2xl font-serif">Welcome To Transacción fácil</h4>
+    <div class="main-container flex">
+        <div class="w-1/2 left-side-web">
+            <img class="w-60 m-auto pt-32" src="https://o.remove.bg/downloads/79340d09-d394-4776-97b4-c9739b33fb25/279-2793698_rfid-card-reader-logo-removebg-preview.png" alt="card">
+            <div>
+                <h4 class="pl-48 text-white text-2xl font-serif">Welcome To Transacción fácil</h4>
+            </div>
         </div>
-    </div>
-    <div class="w-1/2 Right-side-web bg-white">
-        <div class="sign-in-btn">
+        <div class="w-1/2 Right-side-web bg-white">
+            <div class="button-container">
+                <button class="log-in-bttn py-1 px-6 rounded float-right mt-4 mr-12" on:click={handleClick}>
+                    Log In
+                </button>
+            </div>
+            <div class="what-we-do w-3/4 m-auto">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, officiis similique. Minima quia debitis itaque quibusdam, numquam magni, quae laborum vitae unde, perspiciatis accusamus quod eos expedita possimus minus quasi?</p>
+            </div>    
         </div>
-
     </div>
 </main>
 
@@ -26,5 +36,11 @@
     .left-side-web{
         background-color: #ff6b22;
         height: 100vh;
+    }
+    .log-in-bttn{
+        border: .1rem solid #ff6b22;
+    }
+    .log-in-bttn:focus{
+        outline: none;
     }
 </style>
