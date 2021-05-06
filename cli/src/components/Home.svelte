@@ -2,7 +2,7 @@
     import Tailwind from './Tailwind.svelte';
     import { RouterView, Link } from '@bjornlu/svelte-router'
     function handleClick() {
-		alert('Button in ondoing stage')
+		alert('Button is in ondoing stage')
 	}
 </script>
 
@@ -28,7 +28,10 @@
                     We help you Keep logs of When and How much you payed for you last resent transactions of any type either Transport payment, Buyying things or Dept payment. Register your card now and enjoy the service using our app.
                 </p>
                 <div>
-                        <Link to="/App">Home</Link>
+                    <!-- <button class="try-now-button py-1 px-6 rounded float-right mt-4 mr-64" on:click={handleClick}>
+                        Try Now
+                    </button> -->
+                        <Link to="/App">Try Now</Link>
                     <RouterView />                
                 </div>
             </div>    
@@ -51,4 +54,7 @@
     .log-in-bttn:focus{
         outline: none;
     }
+    /* .try-now-button{
+        background-color: #ff6b22;
+    } */
 </style>
