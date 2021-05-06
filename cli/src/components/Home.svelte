@@ -1,5 +1,6 @@
 <script>
     import Tailwind from './Tailwind.svelte';
+    import { RouterView, Link } from '@bjornlu/svelte-router'
     function handleClick() {
 		alert('Button in ondoing stage')
 	}
@@ -26,6 +27,10 @@
                 <p class="font-thin text-lg">
                     We help you Keep logs of When and How much you payed for you last resent transactions of any type either Transport payment, Buyying things or Dept payment. Register your card now and enjoy the service using our app.
                 </p>
+                <div>
+                        <Link to="/App">Home</Link>
+                    <RouterView />                
+                </div>
             </div>    
         </div>
     </div>
