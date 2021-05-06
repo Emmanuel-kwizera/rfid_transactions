@@ -6,7 +6,7 @@ const asyncHandler = require('express-async-handler');
 
 module.exports.addTransaction = asyncHandler(async(req,res,next) => {
     let {UUID,TransaportFare} = req.body;
-    let card = await Card.findById(UUID);
+    let card = await Card.findOne({UUID: UUID});
     if(!card){
         return res.send("CARD NOT FOUND").status(404);
     }else{

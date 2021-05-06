@@ -10,6 +10,7 @@ app.use(express.json());
 app.use(cors());
 
 const cards = require("./routes/Card.route");
+const transactions = require("./routes/Transaction.route");
 
 app.get('/', (req,res) => {
     res.json({
@@ -18,6 +19,7 @@ app.get('/', (req,res) => {
 });
 
 app.use("/api/cards",cards);
+app.use("/api/transactions",transactions);
 
 app.use(ErrorHandler)
 const port = process.env.PORT || 4000;
