@@ -25,7 +25,8 @@
                 <p class="font-thin text-lg">
                     We help you Keep logs of When and How much you payed for you last resent transactions of any type either Transport payment, Buyying things or Dept payment. Register your card now and enjoy the service using our app.
                 </p>
-                <div>
+                <div class="mt-8 mx-40">
+                    <a href="/Report" class="try-now py-3 px-12 text-white font-thin text-md rounded-lg">Try it now</a>
                 </div>
             </div>    
         </div>
@@ -46,5 +47,8 @@
     }
     .log-in-bttn:focus{
         outline: none;
+    }
+    .try-now{
+        background-color: #ff6b22;
     }
 </style>
