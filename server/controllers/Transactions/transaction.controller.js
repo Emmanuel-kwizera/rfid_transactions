@@ -24,10 +24,10 @@ module.exports.getTransactionById = asyncHandler(async(req,res,next) => {
     if(transaction){res.send({success:true,data:transaction}).status(201);} else return next(new ErrorMessage("TRANSACTION NOT FOUND",404));
 })
 
-module.exports.getTransactions = asyncHandler(async(req,res,next) => {
-    let transactions = await Transaction.find();
-    if(transactions){res.send({success:true,data:transactions}).status(201);} else return next(new ErrorMessage("No transaction so far",404));
-})
+exports.getTransactions = async(req, res) =>{
+    const transactions = await Transaction.find({})
+    return res.send(transactions).status(200);
+}
 
 module.exports.deleteTransaction = asyncHandler(async(req,res,next)=>{
     let transaction = await Transaction.findByIdAndDelete(req.params.id);
