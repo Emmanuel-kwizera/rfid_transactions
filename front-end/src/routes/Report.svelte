@@ -11,7 +11,7 @@ axios.get(`http://localhost:4000/api/transactions/all`)
     console.log(error);
   })
 </script>
-<main>
+<main class = "overflow-x-auto">
   <div class="header-container flex mt-3">
     <div class="link-to-home">
       <a href="/" class="back-home px-10 font-medium text-2xl font-serif">Home</a>
