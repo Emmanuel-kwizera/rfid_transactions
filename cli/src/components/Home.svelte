@@ -33,8 +33,8 @@
                         Try Now
                     </button> -->
                     <!-- <div class="try-now-btn"> -->
-                        <Link class="py-3 px-12" to="/App">Try Now</Link>
-                    <RouterView />  
+                        <!-- <Link class="py-3 px-12" to="/app">Try Now</Link> -->
+                    <!-- <RouterView />   -->
                     <!-- </div>               -->
                 </div>
             </div>    
