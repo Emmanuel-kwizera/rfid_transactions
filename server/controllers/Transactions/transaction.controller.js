@@ -10,9 +10,9 @@ module.exports.addTransaction = asyncHandler(async(req,res,next) => {
     if(!card){
         return res.send("CARD NOT FOUND").status(404);
     }else{
-        InitialBalance = card.Balance;
         card.Balance = card.Balance-TransaportFare;
-        const newTransaction = await Transaction.create({UUID,InitialBalance,TransaportFare});
+        NewBalance = card.Balance;
+        const newTransaction = await Transaction.create({UUID,NewBalance,TransaportFare});
         await card.save();
         if(newTransaction){res.send({success:true,data:newTransaction}).status(200);} else return next(new ErrorMessage("Something Went wrong during user creation",400));
     }

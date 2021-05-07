@@ -22,8 +22,8 @@ axios.get(`http://localhost:4000/api/transactions/all`)
   </div>
   <div class="body-container mt-12 w-3/4 m-auto">
     <table class="text-left w-full">
-      <thead class="bg-black border flex text-white w-full">
-        <tr class="flex w-full mb-4">
+      <thead class="border flex text-white w-full">
+        <tr class="flex w-full mb-1">
           <th class="p-4 w-1/4">UUID</th>
           <th class="p-4 w-1/4">New Balance</th>
           <th class="p-4 w-1/4">Transaction Fare</th>
@@ -36,8 +36,8 @@ axios.get(`http://localhost:4000/api/transactions/all`)
         {/if}
         {#each transactions as record }
           <tr class="flex w-full border-2 text-md">
-            <td class="p-4 w-1/4"><a href="/card">{record.UUID}</a></td>
-            <th class="p-4 w-1/4 font-thin">{record.InitialBalance}</th>
+            <td class="p-4 w-1/4 font-normal text-blue-500"><a href="/card">{record.UUID}</a></td>
+            <th class="p-4 w-1/4 font-thin">{record.NewBalance}</th>
             <th class="p-4 w-1/4 font-thin">{record.TransaportFare}</th>
             <th class="p-4 w-1/4 font-thin">{record.Registered_at}</th>
           </tr>
@@ -59,5 +59,8 @@ axios.get(`http://localhost:4000/api/transactions/all`)
     border-left: none;
     border-right: none;
     border-bottom: solid #8e8e93 1px;
+  }
+  thead{
+    background-color: #009688;
   }
 </style>

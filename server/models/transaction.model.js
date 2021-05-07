@@ -8,7 +8,7 @@ const TransactionSchema = new Schema({
       maxlength:[50,"UUID must not exceed 255 letters"],
       trim:true
     },
-    InitialBalance: {
+    NewBalance: {
       type:Number,
       required:[true,"InitialBalance is required"],
       trim:true
