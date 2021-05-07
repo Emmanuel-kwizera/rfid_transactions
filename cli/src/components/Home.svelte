@@ -4,7 +4,7 @@
     function handleClick() {
 		alert('Button is in ondoing stage')
 	}
-    const src = '../assets/rfid-card.png'
+    const src = './assets/rfid-card.png'
 </script>
 
 <Tailwind />
