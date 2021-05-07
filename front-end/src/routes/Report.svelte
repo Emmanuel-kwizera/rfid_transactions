@@ -21,6 +21,10 @@ axios.get(`http://localhost:4000/api/transactions/all`)
     </div>
   </div>
   <div class="body-container mt-12 w-3/4 m-auto">
+    <div class="mt-8 mb-5 float-right flex">
+      <a href="/Report" class="add-card py-3 px-8 mr-5 font-thin text-md rounded-lg">Stored Cards</a>
+      <a href="/Report" class="all-cards py-3 px-8 text-white font-thin text-md rounded-lg">Stored Cards</a>
+    </div>
     <table class="text-left w-full">
       <thead class="border flex text-white w-full">
         <tr class="flex w-full mb-1">
@@ -59,6 +63,13 @@ axios.get(`http://localhost:4000/api/transactions/all`)
     border-left: none;
     border-right: none;
     border-bottom: solid #8e8e93 1px;
+  }
+  .add-card{
+    border: .1rem solid #009688;
+    color: #009688;
+  }
+  .all-cards{
+    background-color: #009688;
   }
   thead{
     background-color: #009688;
