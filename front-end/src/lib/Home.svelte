@@ -1,6 +1,6 @@
 <script>
     function handleClick() {
-		alert('Button is in ondoing stage')
+		alert('Page is in ondoing stage')
 	}
     const src = './assets/rfid-card.png'
 </script>

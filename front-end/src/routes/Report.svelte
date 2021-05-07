@@ -22,8 +22,8 @@ axios.get(`http://localhost:4000/api/transactions/all`)
   </div>
   <div class="body-container mt-12 w-3/4 m-auto">
     <div class="mt-8 mb-5 float-right flex">
-      <a href="/Report" class="add-card py-3 px-8 mr-5 font-thin text-md rounded-lg">Stored Cards</a>
-      <a href="/Report" class="all-cards py-3 px-8 text-white font-thin text-md rounded-lg">Stored Cards</a>
+      <a href="/Create" class="add-card py-3 px-8 mr-5 font-thin text-md rounded-lg">Create Card</a>
+      <a href="/Cards" class="all-cards py-3 px-8 text-white font-thin text-md rounded-lg">Stored Cards</a>
     </div>
     <table class="text-left w-full">
       <thead class="border flex text-white w-full">
