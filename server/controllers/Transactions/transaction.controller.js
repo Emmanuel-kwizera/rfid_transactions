@@ -2,7 +2,6 @@ const Transaction = require("../../models/transaction.model.js");
 const ErrorMessage = require("../../utils/ErrorResponse");
 const Card = require("../../models/card.model.js");
 const asyncHandler = require('express-async-handler');
-// const {getCardByUUId,updateCard} = require("../Cards/card.controller")
 
 module.exports.addTransaction = asyncHandler(async(req,res,next) => {
     let {UUID,TransaportFare} = req.body;
